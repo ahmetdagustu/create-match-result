@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Maç Skor</title>
+</head>
+<body>
+    <h1 id="startChoose">Lütfen İki Takım Seçin!</h1>
+    <div class="container">
+        <div id="teamA" class="box">
+            <button id="guestTeamButton" onclick="enterTeamName('A')">Ev Sahibi Takım</button>
+            <h2></h2>
+            <p id="scoreA" style="display: none;">0</p>
+            <div class="plusResetMines">
+                <button id="increaseScoreA" onclick="increaseScore('A')" style="display: none;">+</button>
+                <button id="resetScoreA" onclick="resetScore('A')" style="display: none;">Reset</button>
+                <button id="reduceScoreA" onclick="reduceScore('A')" style="display: none;">-</button>
+            </div>
+        </div>
+        <div id="teamB" class="box">
+            <button id="guestTeamButton" onclick="enterTeamName('B')">Konuk Takım</button>
+            <h2></h2>
+            <p id="scoreB" style="display: none;">0</p>
+            <div class="plusResetMines">
+                <button id="increaseScoreB" onclick="increaseScore('B')" style="display: none;">+</button>
+                <button id="resetScoreB" onclick="resetScore('B')" style="display: none;">Reset</button>
+                <button id="reduceScoreB" onclick="reduceScore('B')" style="display: none;">-</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="end-match-container">
+        <button id="endMatchButton" onclick="endMatch()" style="display: none;">Maçı Bitir</button>
+    </div>
+    <div id="showResults" style="display: none;"></div>
+    <button id="reloadPageButton" onclick="reloadPage()" style="display: none;">Sayfayı Yenile</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
